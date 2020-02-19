@@ -1,7 +1,11 @@
-// Place your key bindings in this file to override the defaults
+//설정 키바인딩에 오버라이드
 [
   {
     "key": "ctrl+alt+c",
+    "command": "workbench.action.tasks.build"
+  },
+  {
+    "key": "ctrl+alt+r",
     "command": "workbench.action.tasks.test"
   }
 ]

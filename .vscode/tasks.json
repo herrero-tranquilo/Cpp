@@ -53,8 +53,13 @@
         }
       }
     },
-
-    // // 바이너리 실행(Windows)
+    // 바이너리 실행(Ubuntu)
+    // {
+    //     "label": "execute",
+    //     "command": "cd ${fileDirname} && ./${fileBasenameNoExtension}",
+    //     "group": "test"
+    // }
+    // 바이너리 실행(Windows)
     {
       "label": "execute",
       "command": "cmd",
