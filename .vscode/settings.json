@@ -6,6 +6,9 @@
   "terminal.integrated.shell.windows": "C:\\Windows\\sysnative\\cmd.exe",
   "files.associations": {
     "stdio.h": "c",
-    "iostream": "cpp"
-  }
+    "iostream": "cpp",
+    "ostream": "cpp"
+  },
+  "editor.formatOnSave": false,
+
 }
