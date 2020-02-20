@@ -65,7 +65,33 @@ void draw(const Object *state, int width, int height){
     }
 };
 
-void update     (Object *state, char input, int width, int height){};
+void update(Object *state, char input, int width, int height){
+    int diffX =0;
+    int diffY =0;
+    switch(input){
+        case 'a': diffX =-1;   break;
+        case 'd': diffX = 1;   break;
+        case 'w': diffY =-1;   break;
+        case 's': diffY = 1;   break;
+    }
+    //Man check
+    int i =0;
+    for(i =0; i<width*height;++i){
+        if(state[i] ==OBJ_MAN || state[i] ==OBJ_MAN_ON_GOAL){
+            break;
+        }
+    }
+    //After trans xy check
+    int x =i % width;
+    int y =i / width;
+
+    int tempX =x + diffX;
+    int tempY =y + diffY;
+    if(tempX<0||tempY<0||tempX>=width||tempY>=height){
+        return;
+    }
+
+};
 bool checkClear (const Object *state, int width, int height){};
 
 int main()
@@ -85,7 +111,7 @@ int main()
             break; //클리어체크
         }
         //입력값 얻기
-        cout << "a is Left, s is Right, w is Up, z is Down. command?" << endl; //조작설명
+        cout << "a is Left, d is Right, w is Up, s is Down. command?" << endl; //조작설명
         char input;
         cin >> input;
         //갱신
